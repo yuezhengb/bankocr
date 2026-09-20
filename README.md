@@ -1,6 +1,14 @@
 # BankOCR
 
-Offline bank-statement PDF → structured Excel.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
+[![Offline](https://img.shields.io/badge/privacy-fully%20offline-success.svg)](https://github.com/yuezhengb/bankocr)
+[![Good first issues](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/yuezhengb/bankocr/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+[![GitHub stars](https://img.shields.io/github/stars/yuezhengb/bankocr?style=social)](https://github.com/yuezhengb/bankocr/stargazers)
+
+**Offline bank-statement PDF → structured Excel** — CPU-only, no cloud upload, evidence chain from OCR text to confirmed values.
+
+**离线银行流水 PDF → 结构化 Excel**：纯 CPU、不上传云端，保留从 OCR 原文到确认值的证据链。适合财务/办公场景，也欢迎贡献者提交新银行版式模板（[good first issues](https://github.com/yuezhengb/bankocr/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)）。
 
 > **Status:** V1 engineering-complete / release-candidate. A formal V1 tag is **not** claimed yet. See [`docs/v1.1-spec-implementation-audit.md`](docs/v1.1-spec-implementation-audit.md) and [`docs/v1-release-gate.md`](docs/v1-release-gate.md).
 
@@ -139,7 +147,11 @@ As of 2026-08-08, a **local** 4-page / 92-row hand-labeled sample scored 100% tr
 
 The best first contribution is a **new bank layout template**. Templates are column geometry only — never commit customer PDFs or account data.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), and [SECURITY.md](SECURITY.md).
+Start here:
+
+- [Issue #1 — add a bank template](https://github.com/yuezhengb/bankocr/issues/1)
+- [All good first issues](https://github.com/yuezhengb/bankocr/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+- [CONTRIBUTING.md](CONTRIBUTING.md) · [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) · [SECURITY.md](SECURITY.md)
 
 ## License
 
