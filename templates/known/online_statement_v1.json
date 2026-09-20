@@ -1,0 +1,63 @@
+{
+  "template_id": "online_statement_v1",
+  "version": "1",
+  "header_tokens": [
+    "记账日期",
+    "币种",
+    "收入金额",
+    "支出金额",
+    "联机余额",
+    "交易摘要",
+    "交易对手信息",
+    "客户摘要"
+  ],
+  "columns": [
+    {
+      "name": "accounting_date",
+      "left_ratio": 0.034,
+      "right_ratio": 0.101
+    },
+    {
+      "name": "currency",
+      "left_ratio": 0.101,
+      "right_ratio": 0.195
+    },
+    {
+      "name": "income_amount",
+      "left_ratio": 0.195,
+      "right_ratio": 0.309
+    },
+    {
+      "name": "expense_amount",
+      "left_ratio": 0.309,
+      "right_ratio": 0.413
+    },
+    {
+      "name": "online_balance",
+      "left_ratio": 0.413,
+      "right_ratio": 0.52
+    },
+    {
+      "name": "transaction_summary",
+      "left_ratio": 0.52,
+      "right_ratio": 0.654
+    },
+    {
+      "name": "counterparty_info",
+      "left_ratio": 0.654,
+      "right_ratio": 0.832
+    },
+    {
+      "name": "customer_summary",
+      "left_ratio": 0.832,
+      "right_ratio": 0.98
+    }
+  ],
+  "required_fields": [
+    "accounting_date",
+    "currency",
+    "online_balance"
+  ],
+  "row_strategy": "anchor_date",
+  "header_y_ratio": 0.25
+}

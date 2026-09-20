@@ -1,0 +1,63 @@
+{
+  "template_id": "bohai_detail_v1",
+  "version": "1",
+  "header_tokens": [
+    "交易日期",
+    "交易金额",
+    "余额",
+    "交易渠道",
+    "摘要码描述",
+    "对方账号",
+    "对方名称",
+    "交易时间"
+  ],
+  "columns": [
+    {
+      "name": "transaction_date",
+      "left_ratio": 0.032,
+      "right_ratio": 0.143
+    },
+    {
+      "name": "transaction_amount",
+      "left_ratio": 0.143,
+      "right_ratio": 0.255
+    },
+    {
+      "name": "balance",
+      "left_ratio": 0.255,
+      "right_ratio": 0.385
+    },
+    {
+      "name": "channel",
+      "left_ratio": 0.385,
+      "right_ratio": 0.496
+    },
+    {
+      "name": "description",
+      "left_ratio": 0.496,
+      "right_ratio": 0.607
+    },
+    {
+      "name": "counterparty_account",
+      "left_ratio": 0.607,
+      "right_ratio": 0.701
+    },
+    {
+      "name": "counterparty_name",
+      "left_ratio": 0.701,
+      "right_ratio": 0.887
+    },
+    {
+      "name": "transaction_time",
+      "left_ratio": 0.887,
+      "right_ratio": 0.979
+    }
+  ],
+  "required_fields": [
+    "transaction_date",
+    "transaction_amount",
+    "balance"
+  ],
+  "row_strategy": "grid",
+  "header_y_ratio": 0.25
+}

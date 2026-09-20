@@ -1,0 +1,48 @@
+name: Bug report
+description: Something does not work as documented
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do **not** attach real bank PDFs, screenshots of statements, account numbers, or passwords.
+        Use a synthetic PDF or describe the layout in words.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: Expected vs actual behavior.
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      options:
+        - CLI (bankocr-process)
+        - Desktop GUI
+        - Review GUI
+        - Linux web server
+        - Templates / parser
+        - Packaging
+        - Docs
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: "0.1.0 or abc1234"
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Commands, template id, page count, native vs scanned PDF. No customer data.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "OS, Python 3.12, CPU-only, ..."

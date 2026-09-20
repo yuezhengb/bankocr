@@ -1,0 +1,14 @@
+{
+  "sample_id": "synthetic-grid-v1",
+  "transactions": [
+    {
+      "page_index": 0,
+      "row_index": 2,
+      "fields": {
+        "transaction_date": "2026-01-02",
+        "transaction_amount": "12.30",
+        "balance": "100.00"
+      }
+    }
+  ]
+}

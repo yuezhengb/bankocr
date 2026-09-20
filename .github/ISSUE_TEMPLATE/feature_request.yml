@@ -1,0 +1,26 @@
+name: Feature request
+description: Suggest an improvement that does not require customer data
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: Keep the pipeline offline. New network calls on the processing path are out of scope.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is hard or missing today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: A concrete change. Link related docs or template ids if you have them.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

@@ -1,0 +1,12 @@
+command: .venv\Scripts\python.exe -m compileall -q src tests scripts
+cwd: C:\BankOCR
+PYTHONPATH: src
+QT_QPA_PLATFORM: offscreen
+git_sha: b679165fa7bb4fde204d0d1ef089cf3272ef6149
+start_time: 2026-08-09T17:16:40.1948703+08:00
+end_time: 2026-08-09T17:16:40.2721734+08:00
+exit_code: 0
+
+--- stdout ---
+
+--- stderr ---

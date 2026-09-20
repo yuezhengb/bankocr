@@ -1,0 +1,46 @@
+﻿__pycache__/
+.pytest_cache/
+*.py[cod]
+.venv/
+.venv*/
+build/
+*.egg-info/
+
+.pytest-tmp/
+dist/
+work/
+output/
+outputs/
+data/
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+.htpasswd*
+id_rsa
+id_rsa.pub
+secrets/
+
+# Local runtime / user data
+*.sqlite3
+*.xlsx
+*.xls
+
+# Real statements and private golden sets (keep repo examples only)
+*.pdf
+benchmark/datasets/
+benchmark/reports/
+
+# Models (binaries and hash manifests are release assets)
+models/*.onnx
+models/manifest.json
+
+# OS
+Thumbs.db
+.DS_Store

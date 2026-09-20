@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bankocr"
+version = "0.1.0"
+description = "Offline bank statement OCR and validation pipeline"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.12"
+dependencies = [
+    "PyMuPDF>=1.26",
+    "opencv-python>=4.10",
+    "rapidocr>=3.9.0,<4",
+    "onnxruntime>=1.20",
+    "openpyxl>=3.1,<4",
+]
+
+[project.urls]
+Homepage = "https://github.com/yuezhengb/bankocr"
+Issues = "https://github.com/yuezhengb/bankocr/issues"
+Source = "https://github.com/yuezhengb/bankocr"
+
+[project.scripts]
+bankocr-process = "bankocr.cli:main"
+bankocr-review = "bankocr.review_cli:main"
+bankocr-gui = "bankocr.gui_cli:main"
+bankocr-template = "bankocr.template_cli:main"
+bankocr-server = "bankocr.server:main"
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+gui = ["PySide6>=6.7,<7"]
+packaging = ["pyinstaller>=6.11,<7"]
+packaging-nuitka = ["Nuitka>=2.7,<3", "ordered-set>=4.1", "zstandard>=0.23"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+pythonpath = ["src"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

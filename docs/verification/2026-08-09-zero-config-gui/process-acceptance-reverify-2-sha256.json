@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "purpose": "Task 5 process acceptance reverify-2 output hash evidence",
+  "generated_at": "2026-08-09T17:34:55+08:00",
+  "repository_head_when_documented": "603055916ddf83b3a529a8e1b6fbbca210514619",
+  "process_acceptance_log_git_sha": "b679165fa7bb4fde204d0d1ef089cf3272ef6149",
+  "algorithm": "sha256",
+  "run_directory": "work/local-acceptance-20260809-process-reverify-2",
+  "files": [
+    {
+      "relative_path": "work/local-acceptance-20260809-process-reverify-2/example-statement.xlsx",
+      "filename": "example-statement.xlsx",
+      "sha256": "97c10f242ceee500353948df8640daf79b176e60f8c1b4c7373bc84cc88c908d",
+      "size_bytes": 32698
+    },
+    {
+      "relative_path": "work/local-acceptance-20260809-process-reverify-2/example-statement.review.xlsx",
+      "filename": "example-statement.review.xlsx",
+      "sha256": "e8481e8be746bc74483945d4982fe16644b76943f042c7f434ab82a92d2f3642",
+      "size_bytes": 5295
+    },
+    {
+      "relative_path": "work/local-acceptance-20260809-process-reverify-2/example-statement.searchable.pdf",
+      "filename": "example-statement.searchable.pdf",
+      "sha256": "7108bf8bda3189129f4251c2cce6d746896a9aa4511928b6694a1adf63571720",
+      "size_bytes": 12497574
+    },
+    {
+      "relative_path": "work/local-acceptance-20260809-process-reverify-2/example-statement.summary.json",
+      "filename": "example-statement.summary.json",
+      "sha256": "e19e56ab2ca0f0ee050c6e88290314a46d50a60671eb4dca00f916c7b1ebeebd",
+      "size_bytes": 978
+    },
+    {
+      "relative_path": "work/local-acceptance-20260809-process-reverify-2/example-statement.export-manifest.json",
+      "filename": "example-statement.export-manifest.json",
+      "sha256": "e9ad6833fcb790d020a7816fb750bc23f93bbc204bfe775f5e011359a1f4dc48",
+      "size_bytes": 941
+    }
+  ]
+}

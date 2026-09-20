@@ -1,0 +1,14 @@
+command: .venv\Scripts\python.exe scripts\verify_offline_release.py --model-dir work\release-candidate-20260809-v12\models --manifest work\release-candidate-20260809-v12\models\manifest.json --release-dir work\release-candidate-20260809-gui
+cwd: C:\BankOCR
+PYTHONPATH: src
+QT_QPA_PLATFORM: <unset>
+git_sha: b679165fa7bb4fde204d0d1ef089cf3272ef6149
+start_time: 2026-08-09T17:22:42.0972907+08:00
+end_time: 2026-08-09T17:22:42.5750716+08:00
+exit_code: 0
+
+--- stdout ---
+model_fingerprint=787666f230518edd1dcdd389828d45faa7c4f45de48490f08d0eed2e11d3dd38
+offline_model_pack=ok
+
+--- stderr ---

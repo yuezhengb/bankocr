@@ -1,0 +1,13 @@
+command: .venv\Scripts\python.exe -m pip check
+cwd: C:\BankOCR
+PYTHONPATH: src
+QT_QPA_PLATFORM: offscreen
+git_sha: b679165fa7bb4fde204d0d1ef089cf3272ef6149
+start_time: 2026-08-09T17:16:40.2732113+08:00
+end_time: 2026-08-09T17:16:40.5848706+08:00
+exit_code: 0
+
+--- stdout ---
+No broken requirements found.
+
+--- stderr ---

@@ -1,0 +1,23 @@
+[Unit]
+Description=BankOCR local web service
+After=network.target
+
+[Service]
+Type=simple
+User=bankocr
+Group=bankocr
+WorkingDirectory=/opt/bankocr-server
+Environment=PYTHONPATH=/opt/bankocr-server/src
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/bankocr-server/.venv312/bin/python -m bankocr.server --host 127.0.0.1 --port 18081 --work-dir /opt/bankocr-server/data --model-dir /opt/bankocr-server/models --model-manifest /opt/bankocr-server/models/manifest.json --template-dir /opt/bankocr-server/templates/known --font-file /opt/bankocr-server/fonts/msyh.ttc --dpi 150
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/opt/bankocr-server/data
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target

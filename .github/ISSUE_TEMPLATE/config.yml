@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security report
+    url: https://github.com/yuezhengb/bankocr/security
+    about: Do not file public issues with real statements, passwords, or exploit details.
+  - name: Contributing guide
+    url: https://github.com/yuezhengb/bankocr/blob/main/CONTRIBUTING.md
+    about: How to add a bank template and run tests.

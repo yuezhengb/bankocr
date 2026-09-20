@@ -1,0 +1,40 @@
+name: New bank template (good first issue)
+description: Propose or contribute a layout template with no customer data
+title: "[Template] "
+labels: ["good first issue", "templates"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the best first contribution. Read `CONTRIBUTING.md` first.
+        Submit **column geometry only**. Do not upload a real statement.
+  - type: input
+    id: bank
+    attributes:
+      label: Bank or statement product
+      description: Public product name is fine (for example a retail online statement). No account holder.
+    validations:
+      required: true
+  - type: dropdown
+    id: strategy
+    attributes:
+      label: Likely row strategy
+      options:
+        - grid
+        - anchor_date
+        - positional
+        - unknown / need help
+    validations:
+      required: true
+  - type: textarea
+    id: headers
+    attributes:
+      label: Header labels left to right
+      description: The printed column titles, not values from a row.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Layout notes
+      description: Native vs scanned, multi-page headers, unusual date/amount formats. No sample rows from a real customer.

@@ -1,0 +1,31 @@
+command: C:\BankOCR\work\release-candidate-20260809-gui\bankocr-process.exe "C:\BankOCR\samples\example-statement.pdf" --output-dir "C:\BankOCR\work\local-acceptance-20260809-process-reverify-2" --model-dir "C:\BankOCR\work\release-candidate-20260809-gui\models" --model-manifest "C:\BankOCR\work\release-candidate-20260809-gui\models\manifest.json" --template-dir "C:\BankOCR\work\release-candidate-20260809-gui\templates\known" --font-file "C:\BankOCR\work\release-candidate-20260809-gui\fonts\msyh.ttc"
+cwd: C:\BankOCR
+PYTHONPATH: <unset>
+QT_QPA_PLATFORM: <unset>
+git_sha: b679165fa7bb4fde204d0d1ef089cf3272ef6149
+start_time: 2026-08-09T17:23:10.5338589+08:00
+end_time: 2026-08-09T17:23:53.7352666+08:00
+exit_code: 0
+
+--- stdout ---
+
+--- stderr ---
+
+--- post-run-asset-check ---
+example-statement.xlsx: True
+example-statement.review.xlsx: True
+example-statement.searchable.pdf: True
+example-statement.summary.json: True
+example-statement.export-manifest.json: True
+
+
+--- sha256-manifest ---
+manifest: docs/verification/2026-08-09-zero-config-gui/process-acceptance-reverify-2-sha256.json
+run_directory: work/local-acceptance-20260809-process-reverify-2
+algorithm: sha256
+files:
+example-statement.xlsx: 97c10f242ceee500353948df8640daf79b176e60f8c1b4c7373bc84cc88c908d
+example-statement.review.xlsx: e8481e8be746bc74483945d4982fe16644b76943f042c7f434ab82a92d2f3642
+example-statement.searchable.pdf: 7108bf8bda3189129f4251c2cce6d746896a9aa4511928b6694a1adf63571720
+example-statement.summary.json: e19e56ab2ca0f0ee050c6e88290314a46d50a60671eb4dca00f916c7b1ebeebd
+example-statement.export-manifest.json: e9ad6833fcb790d020a7816fb750bc23f93bbc204bfe775f5e011359a1f4dc48

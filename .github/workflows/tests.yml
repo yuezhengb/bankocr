@@ -1,0 +1,125 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  unit:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install test dependencies
+        run: python -m pip install -e ".[test]"
+      - name: Run tests
+        run: python -m pytest --basetemp .pytest-tmp -q
+      - name: Compile sources
+        run: python -m compileall -q src tests scripts
+      - name: Check dependencies
+        run: python -m pip check
+
+  unit-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install system libraries
+        run: sudo apt-get update && sudo apt-get install -y libgl1
+      - name: Install test dependencies
+        run: python -m pip install -e ".[test]"
+      - name: Run tests
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python -m pytest --basetemp .pytest-tmp -q
+      - name: Compile sources
+        run: python -m compileall -q src tests scripts
+      - name: Check dependencies
+        run: python -m pip check
+
+  windows-packaging:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install packaging dependencies
+        run: python -m pip install -e ".[packaging,gui]"
+      - name: Build CLI executable
+        run: pyinstaller --clean --noconfirm packaging/windows/bankocr.spec
+      - name: Build review executable
+        run: pyinstaller --clean --noconfirm packaging/windows/bankocr-review.spec
+      - name: Build main GUI executable
+        run: pyinstaller --clean --noconfirm packaging/windows/bankocr-gui.spec
+      - name: Smoke test executable entrypoints
+        shell: pwsh
+        run: |
+          .\dist\bankocr-process.exe --help
+          .\dist\bankocr-review.exe --help
+          .\dist\bankocr-gui.exe --help
+      - name: Smoke test native PDF processing
+        shell: pwsh
+        run: |
+          $pdf = Join-Path $env:RUNNER_TEMP "bankocr-native.pdf"
+          $output = Join-Path $env:RUNNER_TEMP "bankocr-native-output"
+          $env:BANKOCR_SMOKE_PDF = $pdf
+          @'
+          import os
+          import fitz
+
+          document = fitz.open()
+          page = document.new_page(width=595, height=842)
+          page.insert_text((72, 72), "Account 1001 2026-01-01 12.34")
+          document.save(os.environ["BANKOCR_SMOKE_PDF"])
+          '@ | python -
+          & .\dist\bankocr-process.exe $pdf --output-dir $output
+          if ($LASTEXITCODE -ne 0) { throw "native PDF smoke processing failed" }
+          if (-not (Test-Path (Join-Path $output "bankocr-native.xlsx"))) {
+            throw "native PDF smoke did not produce Excel output"
+          }
+      - name: Smoke test review UI
+        shell: pwsh
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python scripts/review_ui_smoke.py
+      - name: Verify offline release assembly
+        shell: pwsh
+        run: |
+          $root = Join-Path $env:RUNNER_TEMP "bankocr-release-smoke"
+          $models = Join-Path $root "models"
+          $wheelDir = Join-Path $root "wheel"
+          $release = Join-Path $root "release"
+          New-Item -ItemType Directory -Force -Path $models, $wheelDir | Out-Null
+          $rapidModels = python -c "import rapidocr; from pathlib import Path; print(Path(rapidocr.__file__).parent / 'models')"
+          foreach ($name in @(
+            "PP-OCRv6_det_small.onnx",
+            "ch_ppocr_mobile_v2.0_cls_mobile.onnx",
+            "PP-OCRv6_rec_small.onnx"
+          )) {
+            Copy-Item (Join-Path $rapidModels $name) (Join-Path $models $name)
+          }
+          python scripts/create_model_manifest.py --model-dir $models --output (Join-Path $models "manifest.json")
+          python -m pip wheel . --no-deps --no-build-isolation --wheel-dir $wheelDir --quiet
+          $wheel = Get-ChildItem $wheelDir -Filter *.whl | Select-Object -First 1
+          $font = Join-Path $root "placeholder-cjk.ttc"
+          Set-Content -Path $font -Value "placeholder-cjk-font" -NoNewline
+          python scripts/build_offline_bundle.py `
+            --wheel $wheel.FullName `
+            --requirements requirements-lock.txt `
+            --model-dir $models `
+            --manifest (Join-Path $models "manifest.json") `
+            --executable (Join-Path (Get-Location) "dist\bankocr-process.exe") `
+            --review-executable (Join-Path (Get-Location) "dist\bankocr-review.exe") `
+            --gui-executable (Join-Path (Get-Location) "dist\bankocr-gui.exe") `
+            --font-file $font `
+            --output-dir $release
+          python scripts/verify_offline_release.py `
+            --model-dir (Join-Path $release "models") `
+            --manifest (Join-Path $release "models\manifest.json") `
+            --release-dir $release

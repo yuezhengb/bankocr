@@ -1,0 +1,27 @@
+{
+    "exe_path":  "C:\\BankOCR\\work\\release-candidate-20260809-gui\\bankocr-gui.exe",
+    "probe_command":  "\"C:\\BankOCR\\work\\release-candidate-20260809-gui\\bankocr-gui.exe\"",
+    "cwd":  "C:\\BankOCR",
+    "git_sha":  "b679165fa7bb4fde204d0d1ef089cf3272ef6149",
+    "start_time":  "2026-08-09T17:20:23.1008598+08:00",
+    "observed_seconds":  5,
+    "initial_pid":  29672,
+    "observed_pids":  [
+                          29672,
+                          44076
+                      ],
+    "alive_after_observation":  true,
+    "cleanup":  {
+                    "attempted":  true,
+                    "method":  "Process.Kill() plus Stop-Process for same executable path",
+                    "success":  true,
+                    "remaining_pids":  [
+
+                                       ]
+                },
+    "exit_status":  {
+                        "launch_exception":  null,
+                        "root_exit_code_after_cleanup":  -1
+                    },
+    "end_time":  "2026-08-09T17:20:28.7112010+08:00"
+}
