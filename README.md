@@ -16,6 +16,20 @@ BankOCR turns scanned or native bank-statement PDFs into structured Excel, a pag
 
 离线银行流水 PDF 数字化工具：把扫描件或原生 PDF 转成结构化 Excel、PDF 原样图片版 Excel、可搜索 PDF、带来源框的核对 PDF，以及可人工复核的异常结果。默认完全离线，不请求外部 API、不上传流水。
 
+## Demo
+
+A short before/after demo GIF will live here (synthetic sample only — no real accounts).
+
+Want to help? See [issue #4](https://github.com/yuezhengb/bankocr/issues/4) or drop `docs/images/demo.gif` in a PR:
+
+```md
+![BankOCR demo](docs/images/demo.gif)
+```
+
+Storyboard (15–25s): open app → drop synthetic PDF → show Excel rows → show comparison PDF boxes → end on the repo URL.
+
+Also browse related offline OCR tools: [awesome-offline-ocr](https://github.com/yuezhengb/awesome-offline-ocr).
+
 ## Problem / 要解决的问题
 
 Bank statements arrive as PDFs that are painful to search, filter, or reconcile. Cloud OCR is often unacceptable for this data. BankOCR keeps the document on the local machine, records an evidence chain from OCR text to the confirmed value, and refuses to guess when a page layout is unknown.
@@ -150,8 +164,9 @@ The best first contribution is a **new bank layout template**. Templates are col
 Start here:
 
 - [Issue #1 — add a bank template](https://github.com/yuezhengb/bankocr/issues/1)
+- [Issue #4 — demo GIF](https://github.com/yuezhengb/bankocr/issues/4) · [Issue #6 — another template](https://github.com/yuezhengb/bankocr/issues/6)
 - [All good first issues](https://github.com/yuezhengb/bankocr/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-- [CONTRIBUTING.md](CONTRIBUTING.md) · [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) · [SECURITY.md](SECURITY.md)
+- [CHANGELOG.md](CHANGELOG.md) · [CONTRIBUTING.md](CONTRIBUTING.md) · [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) · [SECURITY.md](SECURITY.md)
 
 ## License
 
