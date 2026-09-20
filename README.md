@@ -28,6 +28,8 @@ Want to help? See [issue #4](https://github.com/yuezhengb/bankocr/issues/4) or d
 
 Storyboard (15–25s): open app → drop synthetic PDF → show Excel rows → show comparison PDF boxes → end on the repo URL.
 
+Need a fake statement PDF first? Use [statement-synth](https://github.com/yuezhengb/statement-synth) (clearly labeled SYNTHETIC, no real PII).
+
 Also browse related offline OCR tools: [awesome-offline-ocr](https://github.com/yuezhengb/awesome-offline-ocr).
 
 ## Problem / 要解决的问题
@@ -76,6 +78,13 @@ Desktop GUI extra: `.[gui]`. Windows packaging extra: `.[packaging]`. Linux web 
 Place the three RapidOCR ONNX files in `models/` and generate `models/manifest.json` as described in [`models/README.md`](models/README.md). Runtime processing should always pass `--model-dir` and `--model-manifest` explicitly.
 
 ## Quick start / 快速开始
+
+### Optional: generate a synthetic sample PDF
+
+```bash
+pip install statement-synth   # or clone https://github.com/yuezhengb/statement-synth
+statement-synth --pages 2 --rows 12 --out sample-statement.pdf
+```
 
 ### CLI
 
