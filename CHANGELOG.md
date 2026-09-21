@@ -9,10 +9,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Added
 - Public GitHub presence: bilingual README badges, contribution callouts, and starter good-first issues.
 - Related curated list: [awesome-offline-ocr](https://github.com/yuezhengb/awesome-offline-ocr).
+- Synthetic before/after README illustration (`docs/images/demo.svg`) via [#7](https://github.com/yuezhengb/bankocr/pull/7) (thanks [@Voyagerroc-Lab](https://github.com/Voyagerroc-Lab)); closes [#4](https://github.com/yuezhengb/bankocr/issues/4).
 
 ### Planned
-- Demo GIF / before-after visuals in README (synthetic samples only).
 - More known bank layout templates from the community.
+- Optional recorded screen demo (GIF/MP4) of a real local run on synthetic PDFs.
 
 ## [0.1.0-rc] - 2026-09-21
 
