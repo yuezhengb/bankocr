@@ -18,7 +18,9 @@ BankOCR turns scanned or native bank-statement PDFs into structured Excel, a pag
 
 ## Demo
 
-A short before/after demo GIF will live here (synthetic sample only — no real accounts).
+Illustrative synthetic example: the statement and spreadsheet below show fictional data and demonstrate the intended workflow. They are not a captured OCR run or a guarantee of extraction accuracy.
+
+![Synthetic bank-statement rows beside an Excel Transactions sheet example](docs/images/demo.svg)
 
 Want to help? See [issue #4](https://github.com/yuezhengb/bankocr/issues/4) or drop `docs/images/demo.gif` in a PR:
 

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 760" role="img" aria-labelledby="title desc">
+  <title id="title">Synthetic bank statement converted to an Excel Transactions sheet</title>
+  <desc id="desc">Three fictional transactions are shown in an illustrative statement and spreadsheet layout. This is a concept illustration, not a captured BankOCR run.</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#18304a" flood-opacity=".12"/>
+    </filter>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; }
+      .muted { fill: #64748b; }
+      .body { fill: #243247; font-size: 18px; }
+      .small { fill: #64748b; font-size: 14px; }
+      .head { fill: #17324d; font-size: 25px; font-weight: 700; }
+    </style>
+  </defs>
+  <rect width="1440" height="760" rx="28" fill="#f3f7fb"/>
+  <text x="64" y="78" fill="#17324d" font-size="32" font-weight="700">From statement PDF to structured transactions</text>
+  <text x="64" y="112" class="muted" font-size="18">A synthetic example only. All names, descriptions and amounts below are fictional.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="52" y="150" width="640" height="540" rx="18" fill="#ffffff"/>
+    <rect x="52" y="150" width="640" height="64" rx="18" fill="#e9eff6"/>
+    <path d="M52 196h640v18H52z" fill="#e9eff6"/>
+    <circle cx="82" cy="182" r="7" fill="#ef6b63"/><circle cx="105" cy="182" r="7" fill="#e8b64f"/><circle cx="128" cy="182" r="7" fill="#66b783"/>
+    <text x="158" y="188" class="small" font-weight="700">SOURCE · SYNTHETIC STATEMENT PDF</text>
+    <rect x="94" y="238" width="556" height="412" rx="7" fill="#fff" stroke="#d9e1e9"/>
+    <rect x="118" y="258" width="236" height="27" rx="13" fill="#fff1ef"/>
+    <text x="131" y="277" fill="#b23c36" font-size="13" font-weight="700" letter-spacing=".4">SYNTHETIC / NOT A REAL STATEMENT</text>
+    <text x="118" y="324" class="head">Example Community Bank</text>
+    <text x="118" y="352" class="small">Statement period: January 2026</text>
+    <line x1="118" y1="373" x2="626" y2="373" stroke="#d9e1e9"/>
+    <text x="120" y="402" class="small" font-weight="700">DATE</text>
+    <text x="220" y="402" class="small" font-weight="700">DESCRIPTION</text>
+    <text x="478" y="402" class="small" font-weight="700">DEBIT</text>
+    <text x="568" y="402" class="small" font-weight="700">BALANCE</text>
+    <line x1="118" y1="414" x2="626" y2="414" stroke="#aebccc"/>
+    <text x="120" y="447" class="body">Jan 02</text><text x="220" y="447" class="body">POS purchase · Sample Mart</text><text x="478" y="447" class="body">12.30</text><text x="568" y="447" class="body">1,000.00</text>
+    <line x1="118" y1="464" x2="626" y2="464" stroke="#e4eaf0"/>
+    <text x="120" y="497" class="body">Jan 03</text><text x="220" y="497" class="body">Demo payroll deposit</text><text x="478" y="497" class="body">—</text><text x="568" y="497" class="body">2,250.00</text>
+    <line x1="118" y1="514" x2="626" y2="514" stroke="#e4eaf0"/>
+    <text x="120" y="547" class="body">Jan 04</text><text x="220" y="547" class="body">Card purchase · Example Shop</text><text x="478" y="547" class="body">45.20</text><text x="568" y="547" class="body">2,204.80</text>
+    <line x1="118" y1="564" x2="626" y2="564" stroke="#e4eaf0"/>
+    <text x="118" y="615" class="small">Fictional data created for this visual. No customer data.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="748" y="150" width="640" height="540" rx="18" fill="#ffffff"/>
+    <rect x="748" y="150" width="640" height="64" rx="18" fill="#e9eff6"/>
+    <path d="M748 196h640v18H748z" fill="#e9eff6"/>
+    <circle cx="778" cy="182" r="7" fill="#ef6b63"/><circle cx="801" cy="182" r="7" fill="#e8b64f"/><circle cx="824" cy="182" r="7" fill="#66b783"/>
+    <text x="854" y="188" class="small" font-weight="700">RESULT · EXCEL TRANSACTIONS SHEET</text>
+    <rect x="790" y="238" width="556" height="412" rx="7" fill="#fff" stroke="#d9e1e9"/>
+    <rect x="790" y="238" width="556" height="47" rx="7" fill="#217346"/>
+    <path d="M790 270h556v15H790z" fill="#217346"/>
+    <text x="814" y="269" fill="#fff" font-size="18" font-weight="700">BankOCR · Transactions</text>
+    <rect x="808" y="302" width="520" height="40" fill="#eef5f0"/>
+    <text x="820" y="328" fill="#244c35" font-size="14" font-weight="700">DATE</text>
+    <text x="918" y="328" fill="#244c35" font-size="14" font-weight="700">INCOME</text>
+    <text x="1030" y="328" fill="#244c35" font-size="14" font-weight="700">EXPENSE</text>
+    <text x="1145" y="328" fill="#244c35" font-size="14" font-weight="700">BALANCE</text>
+    <text x="1264" y="328" fill="#244c35" font-size="14" font-weight="700">STATUS</text>
+    <g stroke="#d9e5dc">
+      <path d="M808 342h520M808 398h520M808 454h520M808 510h520"/>
+      <path d="M905 302v208M1017 302v208M1129 302v208M1250 302v208"/>
+    </g>
+    <text x="820" y="377" class="body">2026-01-02</text><text x="918" y="377" class="body">—</text><text x="1030" y="377" class="body">12.30</text><text x="1145" y="377" class="body">1,000.00</text><text x="1264" y="377" fill="#247248" font-size="16" font-weight="700">accepted</text>
+    <text x="820" y="433" class="body">2026-01-03</text><text x="918" y="433" class="body">1,250.00</text><text x="1030" y="433" class="body">—</text><text x="1145" y="433" class="body">2,250.00</text><text x="1264" y="433" fill="#247248" font-size="16" font-weight="700">accepted</text>
+    <text x="820" y="489" class="body">2026-01-04</text><text x="918" y="489" class="body">—</text><text x="1030" y="489" class="body">45.20</text><text x="1145" y="489" class="body">2,204.80</text><text x="1264" y="489" fill="#247248" font-size="16" font-weight="700">accepted</text>
+    <rect x="808" y="538" width="520" height="80" rx="8" fill="#f4f8fb"/>
+    <text x="828" y="572" fill="#17324d" font-size="17" font-weight="700">Structured, filterable rows</text>
+    <text x="828" y="599" class="small">Amounts, balances and review status stay visible.</text>
+    <text x="790" y="649" class="small">Illustrative layout only; not a captured OCR result.</text>
+  </g>
+
+  <path d="M704 408h30" stroke="#5a7896" stroke-width="4" stroke-linecap="round"/>
+  <path d="M723 397l12 11-12 11" fill="none" stroke="#5a7896" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
