@@ -22,15 +22,7 @@ Illustrative synthetic example: the statement and spreadsheet below show fiction
 
 ![Synthetic bank-statement rows beside an Excel Transactions sheet example](docs/images/demo.svg)
 
-Want to help? See [issue #4](https://github.com/yuezhengb/bankocr/issues/4) or drop `docs/images/demo.gif` in a PR:
-
-```md
-![BankOCR demo](docs/images/demo.gif)
-```
-
-Storyboard (15–25s): open app → drop synthetic PDF → show Excel rows → show comparison PDF boxes → end on the repo URL.
-
-Need a fake statement PDF first? Use [statement-synth](https://github.com/yuezhengb/statement-synth) (clearly labeled SYNTHETIC, no real PII).
+Need a fake statement PDF for local testing? Use [statement-synth](https://github.com/yuezhengb/statement-synth) (clearly labeled SYNTHETIC, no real PII).
 
 Also browse related offline OCR tools: [awesome-offline-ocr](https://github.com/yuezhengb/awesome-offline-ocr).
 
@@ -175,7 +167,7 @@ The best first contribution is a **new bank layout template**. Templates are col
 Start here:
 
 - [Issue #1 — add a bank template](https://github.com/yuezhengb/bankocr/issues/1)
-- [Issue #4 — demo GIF](https://github.com/yuezhengb/bankocr/issues/4) · [Issue #6 — another template](https://github.com/yuezhengb/bankocr/issues/6)
+- [Issue #6 — another template](https://github.com/yuezhengb/bankocr/issues/6)
 - [All good first issues](https://github.com/yuezhengb/bankocr/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 - [CHANGELOG.md](CHANGELOG.md) · [CONTRIBUTING.md](CONTRIBUTING.md) · [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) · [SECURITY.md](SECURITY.md)
 
