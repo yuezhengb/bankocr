@@ -1,4 +1,4 @@
-# BankOCR
+# BankOCR 银行流水识别
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
@@ -9,6 +9,8 @@
 **Offline bank-statement PDF → structured Excel** — CPU-only, no cloud upload, evidence chain from OCR text to confirmed values.
 
 **离线银行流水 PDF → 结构化 Excel**：纯 CPU、不上传云端，保留从 OCR 原文到确认值的证据链。适合财务/办公场景，也欢迎贡献者提交新银行版式模板（[good first issues](https://github.com/yuezhengb/bankocr/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)）。
+
+关键词：银行流水识别 · 银行对账单 OCR · 流水 PDF 转 Excel · 离线 OCR · 本地 OCR · 财务对账
 
 > **Status:** V1 engineering-complete / release-candidate. A formal V1 tag is **not** claimed yet. See [`docs/v1.1-spec-implementation-audit.md`](docs/v1.1-spec-implementation-audit.md) and [`docs/v1-release-gate.md`](docs/v1-release-gate.md).
 
