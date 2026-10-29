@@ -11,4 +11,5 @@ regenerate `templates/manifest.json` so SHA-256 pins stay in sync.
 Current layouts:
 
 - `bohai_detail_v1` — grid-style detail statement
+- `ccb_detail_v1` - CCB grid-style detail statement
 - `online_statement_v1` — position/anchor-date online statement

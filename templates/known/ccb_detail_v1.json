@@ -1,0 +1,57 @@
+{
+  "template_id": "ccb_detail_v1",
+  "version": "1",
+  "header_tokens": [
+    "记账日期",
+    "交易日期",
+    "交易金额",
+    "账户余额",
+    "对方账号",
+    "对方户名",
+    "交易地点/附言"
+  ],
+  "columns": [
+    {
+      "name": "accounting_date",
+      "left_ratio": 0.035,
+      "right_ratio": 0.145
+    },
+    {
+      "name": "transaction_date",
+      "left_ratio": 0.145,
+      "right_ratio": 0.255
+    },
+    {
+      "name": "transaction_amount",
+      "left_ratio": 0.255,
+      "right_ratio": 0.385
+    },
+    {
+      "name": "balance",
+      "left_ratio": 0.385,
+      "right_ratio": 0.515
+    },
+    {
+      "name": "counterparty_account",
+      "left_ratio": 0.515,
+      "right_ratio": 0.675
+    },
+    {
+      "name": "counterparty_name",
+      "left_ratio": 0.675,
+      "right_ratio": 0.825
+    },
+    {
+      "name": "description",
+      "left_ratio": 0.825,
+      "right_ratio": 0.975
+    }
+  ],
+  "required_fields": [
+    "accounting_date",
+    "transaction_amount",
+    "balance"
+  ],
+  "row_strategy": "grid",
+  "header_y_ratio": 0.22
+}
